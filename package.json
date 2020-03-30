@@ -22,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/dakshkhetan/OCR-Web-App/issues"
   },
-  "homepage": "https://github.com/dakshkhetan/OCR-Web-App#readme"
+  "homepage": "https://github.com/dakshkhetan/OCR-Web-App#readme",
+  "dependencies": {
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "tesseract.js": "^2.0.0-beta.2"
+  }
 }
