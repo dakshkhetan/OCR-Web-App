@@ -1,0 +1,26 @@
+{
+  "name": "ocr-web-app",
+  "version": "1.0.0",
+  "description": "a basic ocr web app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dakshkhetan/OCR-Web-App.git"
+  },
+  "keywords": [
+    "ocr",
+    "web-app",
+    "imagetopdf",
+    "js",
+    "node"
+  ],
+  "author": "Daksh Khetan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dakshkhetan/OCR-Web-App/issues"
+  },
+  "homepage": "https://github.com/dakshkhetan/OCR-Web-App#readme"
+}
