@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background-color: white;
+}
+
+.container {
+    margin-top: 5%;
+}
+
+.upload-form {
+    margin-top: 10px;
+}
+
+.heading {
+    font-family: sans-serif;
+    margin-top: 10px;
+}
+
+.input-file {
+    width: 210px;
+    color: grey;
+    font-size: 1rem;
+    margin-top: 20px;
+    border: 1px solid black;
+}
+
+.btn-submit {
+    color: #222;
+    font-size: 1.1rem;
+    margin-top: 35px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #222;
+    color: white;
+}
