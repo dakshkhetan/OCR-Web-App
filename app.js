@@ -31,12 +31,27 @@ app.get("/", (req, res) => {
 
 app.post("/upload", (req, res) => {
     upload(req, res, (err) => {
-        
+        (async () => {
+            const worker = createWorker({
+                logger: m => console.log(m)
+            });
+            await worker.load();
+            await worker.loadLanguage('eng');
+            await worker.initialize('eng');
+            const { data: { text } } = await worker.recognize(`./uploads/${req.file.originalname}`);
+            // console.log(text);
+            const { data } = await worker.getPDF('OCR Result');
+            fs.writeFileSync('ocr-result.pdf', Buffer.from(data));
+            console.log('PDF generated: ocr-result.pdf');
+            res.redirect("/download");
+            await worker.terminate();
+        })();
     });
 });
 
 app.get("/download", (req, res) => {
-    res.redirect("/");
+    const file = `${__dirname}/ocr-result.pdf`;
+    res.download(file);
 });
 
 // Server
