@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 const multer = require('multer');
+const { createWorker } = require('tesseract.js');
 
 // assets
 app.use(express.static('./assets'));
@@ -21,6 +22,22 @@ const storage = multer.diskStorage({
 
 // upload function
 const upload = multer({ storage: storage }).single("avatar");
+
+/** routes **/
+
+app.get("/", (req, res) => {
+    res.render('index');
+});
+
+app.post("/upload", (req, res) => {
+    upload(req, res, (err) => {
+        
+    });
+});
+
+app.get("/download", (req, res) => {
+    res.redirect("/");
+});
 
 // Server
 app.listen(port, (err) => {
